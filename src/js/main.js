@@ -97,18 +97,21 @@ gsap.to("#js-exercise-7", {
     Réaliser une animation libre
     lorsque le bouton est cliqué
    ----------------------- */
-gsap
-  .timeline()
-  .to("#js-exercise-8", {
-    rotate: 45,
-    duration: 2,
-    opacity: 0.5,
-    ease: "elastic.in",
-  })
-  .to("#js-exercise-8", {
-    rotate: 0,
-    duration: 2,
-    opacity: 1,
-    delay: 2,
-    ease: "elastic.out",
-  });
+const button = document.querySelector("button");
+button.addEventListener("click", function () {
+  gsap
+    .timeline()
+    .to("#js-exercise-8", {
+      rotate: 45,
+      duration: 2,
+      opacity: 0.5,
+      ease: "elastic.in",
+    })
+    .to("#js-exercise-8", {
+      rotate: 0,
+      duration: 2,
+      opacity: 1,
+      delay: 2,
+      ease: "elastic.out",
+    });
+});
